@@ -1,0 +1,547 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+:root{
+    --white-clr:#fff;
+    --black-clr:#000;
+    --primary-clr: #3B44F6;
+    --bg-clr: #f1ecec;
+}
+
+body{
+    position: relative;
+    background-color: var(--bg-clr);
+}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 5rem;
+    color: var(--white-clr);
+    align-items: center;
+    background: rgba(0, 0, 0, 0.514);
+    z-index: 10;
+}
+
+.nav-links{
+    display: flex;
+    padding: 0 3rem;
+    gap: 2rem;
+}
+
+li{
+    list-style: none;
+    padding: 0.6rem;
+    position: relative;
+}
+
+.fa-chevron-down{
+    margin-left: 0.3rem;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--white-clr);
+    font-size: 13px;
+}
+
+.drop-down{
+    display: none;
+    position: absolute;
+    width: 10.5rem;
+    margin-top: 0.4rem;
+    background-color: var(--primary-clr);
+    padding: 0.5rem;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.479);
+}
+
+.drop-down li a{
+    padding: 0.5rem;
+}
+
+.drop-down li:hover{
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.li-drop:hover .drop-down{
+    display: flex;
+}
+
+header .buttons{
+    display: flex;
+    gap: 0.5rem;
+}
+
+header .buttons a{
+    border: none;
+    outline: none;
+    color: var(--white-clr);
+    font-size: 13px;
+    text-decoration: none;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.sign-up-btn{
+    background-color: var(--primary-clr);
+}
+
+.login-btn{
+    border: 1px solid var(--primary-clr) !important;
+    background: transparent;
+}
+
+.sign-up-btn:hover{
+    border: 1px solid var(--primary-clr);
+    background: transparent;
+}
+
+.login-btn:hover{
+    background-color: var(--primary-clr);
+}
+
+span{
+    color: var(--primary-clr);
+}
+
+.first-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--white-clr);
+}
+
+.banner{
+    background: url(../img/banner\ promotion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 0 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.7rem;
+}
+
+.banner h1{
+    font-size: 4rem;
+}
+
+.banner a{
+    border: none;
+    outline: none;
+    background: var(--primary-clr);
+    color: var(--white-clr);
+    font-size: 15px;
+    text-decoration: none;
+    width: 10rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.second-container{
+    padding: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.second-container h1{
+    font-size: 2rem;
+}
+
+.second-container p{
+    font-size:13px ;
+}
+
+.second-container .why-icons{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.why-icons div{
+    width: 10rem;
+}
+
+.why-icons img{
+    width: 80px;
+}
+
+.why-icons div p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.third-container{
+    padding: 5rem;
+}
+
+.genre{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.genre a{
+    color: var(--black-clr);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.genre h1, .fourth-container h1{
+    padding: 0;
+    font-size: 2rem;
+}
+
+.genre-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.genre-list a{
+    width: 5rem;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.genre-list img{
+    position: relative;
+}
+
+.strategy > div:not(:nth-child(1))::before{
+    position: absolute;
+    content: '';
+    inset: 0 0 0 0;
+    background-color: #000;
+}
+
+.fourth-container{
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.best-games{
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-games h3{
+    color: var(--black-clr);
+}
+
+.best-items{
+    padding: 1rem;
+    height: 22rem;
+    background-color: var(--white-clr);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount{
+    background: rgba(128, 128, 128, 0.144);
+    display: flex;
+    border-radius: 5px;
+}
+
+.disount-percent{
+    padding: 0 0.4rem;
+    background: rgba(255, 0, 0, 0.24);
+    color: red;
+    border-radius: 5px;
+}
+
+.disount-price{
+    padding: 0 0.4rem;
+    text-decoration: line-through;
+    color: gray;
+}
+
+.free-download p{
+    display: inline;
+    background: #3b44f62a;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+}
+
+.fifth-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 5rem;
+}
+
+.fifth-container .best-games {
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.sixth-container{
+    padding: 3rem 5rem;
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+}
+
+.sixth-container .sixth-wrapper{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.sixth-wrapper a{
+    color: var(--white-clr);
+    text-decoration: none;
+    display: block;
+    width: 12rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    padding: 0.3rem 2rem;
+    border: 1px solid var(--white-clr);
+}
+
+.sixth-wrapper div{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0.5rem;
+    border-radius: 5px;
+}
+
+.six-one-first{
+    background: url(../img/call-of-duty-mw.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 45rem;
+    height: 25rem;
+    padding: 3rem;
+}
+
+.six-one-second{
+    background: url(../img/nba-2k22.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 45rem;
+    height: 25rem;
+    padding: 3rem;
+}
+
+.six-two-one{
+    background: url(../img/fifa-23.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 16.42rem;
+    padding: 2rem;
+}
+
+.six-two-two{
+    background: url(../img/resident-evil.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 16.42rem;
+    padding: 2rem;
+}
+
+.six-two-three{
+    background: url(../img/Alien-dark.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 16.42rem;
+    padding: 2rem;
+}
+
+.seventh-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.seventh-container .texts{
+    max-width: 30rem;
+    text-align: center;
+    /* font-weight: 600; */
+}
+
+.seventh-container h1{
+    font-size: 2rem;
+    font-size: 900;
+    margin-bottom: 1rem;
+}
+
+.seventh-container .reviews, swiper-container{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    max-width: 70rem;
+}
+
+.cards, swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--white-clr);
+    padding: 1.5rem;
+    border-radius: 5px;
+    max-width: 21rem;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+
+.star{
+    font-size: 1.3rem;
+    color:#EDAB00;
+}
+
+.cards img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.cards p{
+    font-size: 14px;
+}
+
+.cards:hover{
+    transform: scale(1.05);
+}
+
+
+swiper-container{
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+
+footer{
+    background: var(--black-clr);
+    padding: 2rem 5rem;
+}
+
+footer .logo-head{
+    color: var(--white-clr);
+}
+
+footer a, footer p{
+    color: gray;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-content div:not(:last-child){
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-content div div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content div div a{
+    background-color: rgba(128, 128, 128, 0.445);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+footer h3{
+    color: var(--white-clr);
+}
+
+footer .year{
+    text-align: center;
+    padding: 2rem;
+    margin-top: 5rem;
+    border-top: 1px solid gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/* swiper-container{
+    width: 100%;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+swiper-slide{
+    width: 100%;
+    
+    overflow: hidden;
+} */
